@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>منتجات فرفانو</title>
+    <style>
+        body { font-family: Arial; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .products { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
+        .product { background: white; border-radius: 10px; margin: 10px; padding: 10px; width: 250px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; }
+        .product img { width: 100%; border-radius: 10px; }
+        button { background: #4CAF50; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <section class="products" id="products">
+        <h2 style="width: 100%; text-align: center;">منتجاتنا</h2>
+
+        <div class="product">
+            <img src="beige minimalist Perfume Product Promotion Instagram post.png" alt="TOM FORD">
+            <h3>TOM FORD</h3>
+            <p>السعر: 620 جنيه</p>
+            <button onclick="contactWhatsApp('TOM FORD')">اطلب الآن</button>
+        </div>
+
+        <div class="product">
+            <img src="Black and Gold Modern Sale Perfume Instagram Post.png" alt="مسمم">
+            <h3>مسمم</h3>
+            <p>السعر: 500 جنيه</p>
+            <button onclick="contactWhatsApp('مسمم')">اطلب الآن</button>
+        </div>
+
+        <div class="product">
+            <img src="Pink Modern Natural Perfume Discount Facebook Post.png" alt="يارا">
+            <h3>يارا</h3>
+            <p>السعر: 400 جنيه</p>
+            <button onclick="contactWhatsApp('يارا')">اطلب الآن</button>
+        </div>
+    </section>
+
+    <script>
+        function contactWhatsApp(productName) {
+            const phone = "201234567890"; // استبدله برقمك
+            const message = encodeURIComponent("مرحبًا، أود طلب عطر: " + productName);
+            window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+        }
+    </script>
+</body>
+</html>
